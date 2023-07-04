@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y ca-certificates
 # Define a volume for persistent storage
 VOLUME ["/data"]
 
-COPY playit.toml /data/playit.toml
 COPY . /app
 RUN chmod 0755 /app/playit-x64
 
