@@ -1,11 +1,11 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:3.13
-FROM $BUILD_FROM
+FROM ubuntu:focal
 
 RUN mkdir /app
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    ca-certificates
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update && apt-get install -y ca-certificates
 
 COPY . /app
 RUN chmod 0755 /app/playit-x64
