@@ -1,0 +1,14 @@
+name: Playit.gg
+version: dev
+slug: playit-gg
+description: Playit.gg client add-on for Home Assistant
+url: https://github.com/MegaTheLEGEND/Homeassistant-addons
+maintainer: Your Name <your@email.com>
+arch:
+  - aarch64
+  - amd64
+options:
+  log_level: info
+
+schema:
+  log_level: str
