@@ -11,6 +11,6 @@ RUN apt-get update && apt-get install -y ca-certificates
 VOLUME ["/data"]
 
 COPY . /app
-RUN chmod 0755 /app/playit-x64
+RUN chmod 0755 /app/playit-1.0.0-rc3
 
-CMD ["/app/playit-x64"]
+CMD ["/app/playit-1.0.0-rc3"]
