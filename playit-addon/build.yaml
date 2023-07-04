@@ -1,0 +1,9 @@
+name: playit-gg
+version: 1.0.0
+description: Add-on for running the Playit.gg client
+slug: playit-gg
+maintainer: none
+repository: https://github.com/mafen/playit-docker
+docker_image: ghcr.io/mafen/playit-docker
+arch:
+  - amd64
