@@ -9,6 +9,11 @@ arch:
   - amd64
 options:
   log_level: info
+  save_directory:
+    name: Save Directory
+    description: Directory where Playit.gg client will save files. (for persistence hopefully)
+    default: /path/to/save/directory
+    required: true
 
 schema:
   log_level: str
