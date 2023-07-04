@@ -8,10 +8,14 @@ arch:
   - aarch64
   - amd64
 options:
-  log_level: info
+  log_level:
+    name: Log Level
+    description: Log level for the Playit.gg client add-on.
+    default: info
+    required: true
   save_directory:
     name: Save Directory
-    description: Directory where Playit.gg client will save files. (for persistence hopefully)
+    description: Directory where Playit.gg client will save files.
     default: /path/to/save/directory
     required: true
 
