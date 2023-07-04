@@ -1,12 +1,13 @@
-FROM ubuntu:focal
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:3.13
+FROM $BUILD_FROM
+
 RUN mkdir /app
-WORKDIR '/app'
-RUN apt-get update
-RUN apt-get install ca-certificates -y
-RUN update-ca-certificates
-# Install Nodejs
-#COPY playit-x64 /app
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    ca-certificates
+
 COPY . /app
-#RUN chmod a+x playit-0.9.3
 RUN chmod 0755 /app/playit-x64
-CMD /app/playit-x64
+
+CMD ["/app/playit-x64"]
