@@ -13,4 +13,5 @@ VOLUME ["/data"]
 COPY . /app
 RUN chmod 0755 /app/playit-0.9.3
 
-CMD ["/app/playit-0.9.3"]
+# Set the entrypoint with network option
+ENTRYPOINT ["./playit-0.9.3", "--network=host"]
